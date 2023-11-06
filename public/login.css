@@ -13,6 +13,14 @@ body {
     margin-top: 10%;
 }
 
+.register-container {
+  width:20%;
+  height:60%;
+  padding:3% 1%;
+  background-color: aliceblue;
+  margin-top: 10%;
+}
+
 .textfields {
     border: none;
     background-color: none;
