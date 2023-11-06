@@ -22,7 +22,8 @@
     <div class='navbar'>
         <h3 class='lead name'>Welcome, {{auth()->user()->firstname}}</h3>
         <form action='/logout' method='POST'>
-            <button class='btn btn-danger mt-2' type='submit' >Log Out</button>
+            @csrf
+            <button type='submit' class='btn btn-danger mt-2' >Log Out</button>
         </form>
     </div>
     <div class='sidebar'>

@@ -35,7 +35,7 @@ class UserController extends Controller
         if(auth()->attempt(['email' => $inputs['email'], 'password' => $inputs['password']])) {
             return redirect('/');
         } else {
-            return redirect('/login')->with('error', 'Login Failed!');
+            return redirect('/login')->with('error', 'Incorrect Credentials!');
         }
     }
 

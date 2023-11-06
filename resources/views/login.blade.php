@@ -1,34 +1,32 @@
 <x-logLayout>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card mt-5">
-                    @if (session()->has('error'))
-                        <div class='alert alert-danger'>
-                            {{ session('error') }}
-                        </div>
-                    @endif
-                    <div class="card-header">
-                        <h2 class="text-center">Login</h2>
+                
+                <div class="login-container">
+                    <div>
+                        <h2 class="mb-5 heading">Login</h2>
                     </div>
-                    <div class="card-body">
+                    <div>
+                        
                         <form action="/login" method='POST'>  
+                            @if (session()->has('error'))
+                        <p class='lead' style='color:rgb(222, 117, 117)18, 151, 151)'>
+                            {{ session('error') }}
+                        </p>
+                    @endif
                             @csrf
-                            <div class="form-group mb-2">
-                                <label class='mb-2' for="username">Email:</label>
-                                <input type="text" name='email' required class="form-control" id="username"
-                                    placeholder="Enter your username">
+                            <div class="input-container">
+                                
+                                <input class="input-field" type="text" placeholder="Email" name="email">
+                               
+                              </div>
+                            <div class="input-container">
+                       
+                                <input type="password" name='password' required class="input-field" id="password"
+                                    placeholder="Password">
                             </div>
-                            <div class="form-group">
-                                <label class='mb-2' for="password">Password:</label>
-                                <input type="password" name='password' required class="form-control" id="password"
-                                    placeholder="Enter your password">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                            <button type="submit" class="buttons">Login</button>
                         </form>
                     </div>
-                </div>
-            </div>
+       
         </div>
-    </div>
+
 </x-logLayout>

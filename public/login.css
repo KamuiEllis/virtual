@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(235, 119, 119);
+    display: flex;
+   justify-content: center;
+   width: 100%;     
+}
+
+.login-container {
+    width:20%;
+    height:40%;
+    padding:3% 1%;
+    background-color: aliceblue;
+    margin-top: 10%;
+}
+
+.textfields {
+    border: none;
+    background-color: none;
+    background: none;
+    width:100%;
+    margin-bottom: 5%;
+    border-bottom: 2px solid rgb(235, 119, 119);
+}
+
+.textfields:focus {
+    outline: none;
+    border: none;
+    background-color: none;
+    border-bottom: 1px solid rgb(235, 119, 119);
+    background: none;
+}
+
+.buttons {
+    width: 100%;
+    height: 15%;
+    border: none;
+    font-weight: 600;
+    color:white;
+    margin-top:5%;
+    background-color: rgb(235, 119, 119);
+}
+
+.heading {
+    font-size: 25;
+}
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the form icons */
+  .icon {
+    padding: 10px;
+    background-color:  white;
+    color: red;
+    width:20%;
+    text-align: center;
+  }
+  
+  /* Style the input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border:none;
+  }
+  
+  .input-field:focus {
+    border: 2px solid rgb(235, 119, 119);
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
