@@ -1,0 +1,28 @@
+.navbar {
+    background-color: rgb(254, 254, 254);
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height:7%;
+  
+    padding: 0 2%;
+}
+
+.name {
+    font-size: 2em;
+}
+
+.sidebar {
+    background-color: rgb(235, 119, 119);
+    width:20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height:100%;
+    min-height: 200px;
+    z-index:100;
+    position:relative;
+}
+
+.name-container {
+    width:100%;
+    text-align: center;
+    padding:50px 20px;
+}
