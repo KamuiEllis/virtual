@@ -2,14 +2,20 @@
     <div class='p-4'>
     <p class='lead' style='font-size:25px;'>Add Product</p>
     <hr/>
-
+    
     <small class='mb-5'>Enter information about a product you want to add to your inventory.</small>
+    @if (session('success'))
+    <div class='alert alert-success mt-5' role='alert'>
+        {{ session('success') }}
+    </div>
+    @endif
 
-    <form action='/addProduct' method="POST" class="mb-3 mt-5" enctype="multipart/form-data">
+    <img id="previewImage" src="#" alt="Image Preview"  style="display: none; max-width: 100%; width:200px; margin-top:10px;"/>
+    <form action='/addProduct' method="POST" class="mb-3 mt-3" enctype="multipart/form-data">
         @csrf
         <div class='mb-3'>   
             <label for="exampleFormControlInput1" class="form-label">Image of Product</label>
-            <input type="file" name='image' class="form-control" id="exampleFormControlInput1" >
+            <input type="file" id="imageInput" accept="image/*" name='image' class="form-control" id="exampleFormControlInput1" >
             @error('image')
                         <small class='' style='color:red;'>{{$message}}</small>
                     @enderror

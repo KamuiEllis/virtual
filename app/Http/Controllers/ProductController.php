@@ -30,9 +30,15 @@ class ProductController extends Controller
 
         Storage::put("public/products/$isd", $resizedImage);
 
-        $image = $request->file('image')->store('public/products');
+        $request->file('image')->store('public/products');
+
         $product = Product::create($inputs);
+    
         $product->image = $isd;
+
+        $product->save();
+
+
 
         return redirect('/addProduct')->with('success', 'Product has been added to inventory');
     }

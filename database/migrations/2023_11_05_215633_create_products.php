@@ -21,7 +21,7 @@ return new class extends Migration
             $table->longText('description');
             $table->integer('quantity')->default(0);
             $table->decimal('cost');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->decimal('weight');
             $table->timestamps();
         });
