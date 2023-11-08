@@ -10,6 +10,13 @@ use Intervention\Image\Facades\Image;
 class ProductController extends Controller
 {
     //
+
+
+    public function products(Request $request) {
+        $products = Product::orderBy("id","desc")->get();
+        return view("products", ['products' => $products]);
+    }
+
     public function addProduct(Request $request) {
        
         $request->validate([

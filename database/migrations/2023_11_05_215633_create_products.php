@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('sku')->unique();
             $table->string('shortDescription');
             $table->longText('description');
-            $table->integer('quantity')->default(0);
+            $table->integer('quantity');
             $table->decimal('cost');
             $table->string('image')->nullable();
             $table->decimal('weight');

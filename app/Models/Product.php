@@ -15,6 +15,7 @@ class Product extends Model
         'shortDescription',
         'description',
         'cost',
+        'quantity',
         'images',
         'weight',
     ];

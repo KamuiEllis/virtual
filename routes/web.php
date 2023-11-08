@@ -27,9 +27,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+
 
 Route::get('/addProduct', function () {
     return view('addProduct');
@@ -43,3 +41,5 @@ Route::post('/logout', [UserController::class, 'logout']);
 
 //product routes
 Route::post('/addProduct', [ProductController::class, 'addProduct']);
+
+Route::get('/products', [ProductController::class, 'products']);
