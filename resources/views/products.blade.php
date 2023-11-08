@@ -43,7 +43,7 @@
                       echo addCommas($product->cost)
                   @endphp</td>
                   <td>{{$product->weight}}</td>
-                  <td><a href='/product/{{$product->id}}'><button class='btn btn-secondary'>View</button></a></td>
+                  <td><a href='/products/{{$product->id}}'><button class='btn btn-secondary'>View</button></a></td>
                 </tr>
               @endforeach
              

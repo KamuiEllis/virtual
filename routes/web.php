@@ -43,3 +43,7 @@ Route::post('/logout', [UserController::class, 'logout']);
 Route::post('/addProduct', [ProductController::class, 'addProduct']);
 
 Route::get('/products', [ProductController::class, 'products']);
+
+Route::get('/products/{product}', [ProductController::class, 'getProduct']);
+
+Route::put('/products/{product}', [ProductController::class, 'editProduct']);
