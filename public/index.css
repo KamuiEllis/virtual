@@ -13,7 +13,7 @@
 
 .sidebar {
     background-color: rgb(235, 119, 119);
-    width:15%;
+    width:20%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height:100%;
     min-height: 200px;
@@ -21,8 +21,73 @@
     position:relative;
 }
 
-.name-container {
+.logo {
+    text-align: center;
+}
+
+.logo-container {
     width:100%;
     text-align: center;
-    padding:50px 20px;
+}
+
+.name-container {
+    width:100%;
+    padding:50px 0px;
+}
+
+.logout-button {
+    display:block;
+}
+
+.list-container {
+    width:100%;
+    align-items: center;
+}
+
+.list-items{
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color:black;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.link:hover {
+    left:10px;
+    color:white;
+}
+
+.icons {
+    display:none;
+}
+
+.link-text {
+    display:block;
+   
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        height:12%;
+    }    
+
+    .logo {
+        display: none;
+    }
+
+    .link-text {
+        display:none;
+    }
+    
+    .sidebar {
+        width:15%;
+    }
+
+    .icons {
+        margin-bottom:25%;
+        display:block;
+    }
 }

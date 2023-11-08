@@ -23,10 +23,65 @@
         <h3 class='lead name'>Welcome, {{auth()->user()->firstname}}</h3>
         <form action='/logout' method='POST'>
             @csrf
-            <button type='submit' class='btn btn-danger mt-2' >Log Out</button>
+            <button type='submit' class='btn btn-danger mt-2 logout-button' >Log Out</button>
         </form>
     </div>
     <div class='sidebar'>
         <div class='name-container'>
+            <img src='{{ asset('/logo.png') }}' class='logo' style='margin-left:40px;'  width='200'/>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    
+                    <a class="nav-link active link icons" href="#">
+                        <img src='{{ asset('/dashboard.png') }}' width='32'/>
+                    </a>
+
+                    <a class="nav-link active link link-text" href="#">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active link icons" href="#">
+                        <img src='{{ asset('/order.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="#">
+                        Orders
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active link icons" href="#">
+                        <img src='{{ asset('/product.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="#">
+                        Products
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active link icons" href="#">
+                        <img src='{{ asset('/customer.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="#">
+                        Customers
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active link icons" href="#">
+                        <img src='{{ asset('/support.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="#">
+                        Admins
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active link icons" href="#">
+                        <img src='{{ asset('/role.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="#">
+                        Roles
+                    </a>
+                </li>
+              
+            </ul>
         </div>
     </div>
