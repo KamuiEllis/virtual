@@ -54,6 +54,8 @@ class ProductController extends Controller
         return redirect('/addProduct')->with('success', 'Product has been added to inventory');
     }
 
+     
+
     public function editProduct(Product $product, Request $request) {
 
         $inputs = $request->validate([
@@ -81,5 +83,10 @@ class ProductController extends Controller
         }
 
         return redirect('/products/'.$product->id )->with('success', 'Product has been edited!');
+    }
+
+    public function deleteProduct (Product $product) {
+        $product->delete();
+        return redirect('/products')->with('success', 'Product has been deleted!');
     }
 }

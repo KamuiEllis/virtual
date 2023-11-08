@@ -2,7 +2,11 @@
     <div class='p-4'>
         <p class='lead' style='font-size:25px;'>Products</p>
         <hr/>
-
+        @if (session('success'))
+        <div class='alert alert-success mt-5' role='alert'>
+            {{ session('success') }}
+        </div>
+        @endif
         <div class='row'>
             
             <form method='POST' action='/product/search' class='col-lg-9'>
