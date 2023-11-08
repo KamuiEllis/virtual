@@ -55,6 +55,21 @@
     transition: 0.3s;
 }
 
+.add-button {
+    float:right;
+}
+
+
+
+.fields{
+    padding: 10px;
+    outline: none;
+
+  }
+
+  .fields:focus {
+    border: 2px solid rgb(235, 119, 119);
+  }
 .link:hover {
     left:10px;
     color:white;
@@ -67,6 +82,11 @@
 .link-text {
     display:block;
    
+}
+
+.fields {
+    height:37px;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -83,11 +103,17 @@
     }
     
     .sidebar {
-        width:15%;
+        width:20%;
     }
 
     .icons {
         margin-bottom:25%;
         display:block;
     }
+
+    .add-button {
+        float:left;
+        margin-bottom: 10px;
+    }
+    
 }

@@ -16,6 +16,25 @@
     <title>Virtual Intelligence</title>
     <script src="{{ asset('/responsiveness.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('/index.css') }}">
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+  rel="stylesheet"
+/>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+></script>
 </head>
 
 <body>
@@ -53,7 +72,7 @@
                     <a class="nav-link active link icons" href="#">
                         <img src='{{ asset('/product.png') }}' width='32'/>
                     </a>
-                    <a class="nav-link link link-text" href="#">
+                    <a class="nav-link link link-text" href="/products">
                         Products
                     </a>
                 </li>

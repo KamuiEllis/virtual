@@ -26,6 +26,10 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/products', function () {
+    return view('products');
+});
+
 Route::post('/register', [UserController::class, 'register']);
 
 Route::post('/login', [UserController::class, 'login']);
