@@ -11,6 +11,14 @@ class ProductController extends Controller
 {
     //
 
+    public function search(Request $request) {
+        $inputs = $request->validate([
+            'text' => [],
+        ]);
+
+        $products = Product::search($inputs['text'])->get();
+        return view("products", ['products' => $products]);
+    }
 
     public function products(Request $request) {
         $products = Product::orderBy("id","desc")->get();

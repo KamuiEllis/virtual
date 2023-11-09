@@ -49,3 +49,5 @@ Route::get('/products/{product}', [ProductController::class, 'getProduct']);
 Route::put('/products/{product}', [ProductController::class, 'editProduct']);
 
 Route::delete('/products/{product}', [ProductController::class, 'deleteProduct']);
+
+Route::post('/products/search', [ProductController::class, 'search']);

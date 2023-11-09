@@ -1,4 +1,5 @@
 <x-layout>
+    @include('util')
     <div class='p-4'>
         <p class='lead' style='font-size:25px;'>Products</p>
         <hr/>
@@ -9,9 +10,9 @@
         @endif
         <div class='row'>
             
-            <form method='POST' action='/product/search' class='col-lg-9'>
+            <form method='POST' action='/products/search' class='col-lg-9'>
                 @csrf
-                <input type='text' placeholder='Search' class='fields' name='search' />
+                <input type='text' placeholder='Search' class='fields' name='text' value='' />
                 <button type='submit' class='btn btn-danger mb-lg-1 mt-lg-0 mt-sm-2' >Search</button>
             </form>
 
@@ -19,11 +20,7 @@
                 <a href='/addProduct'><button type='submit' class='btn btn-danger add-button'>Add Product</button></a>
             </div>
         </div>
-        @php
-          function addCommas($number) {
-            return number_format($number);
-          }   
-        @endphp
+       
         <div class='table-responsive'>
         <table class="table table-hover table-responsive" style='width:100%'>
             <thead>

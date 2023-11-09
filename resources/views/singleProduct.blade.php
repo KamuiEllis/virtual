@@ -94,7 +94,7 @@
                 @method('DELETE')
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button type="submit" class="btn btn-primary">DELETE</button>
-            </fo>
+            </form>
           </div>
         </div>
       </div>
