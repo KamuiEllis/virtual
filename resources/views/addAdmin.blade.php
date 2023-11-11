@@ -20,36 +20,36 @@
                         <small class='' style='color:red;'>{{$message}}</small>
                     @enderror
         </div>
-    <div class='mb-3'>   
-        <label for="exampleFormControlInput1" class="form-label">Lastname</label>
-        <input type="text" name='lastname' class="form-control" id="exampleFormControlInput1" placeholder="Lastname of admin">
-        @error('lastname')
-                        <small class='' style='color:red;'>{{$message}}</small>
-                    @enderror
-    </div>
+        <div class='mb-3'>   
+            <label for="exampleFormControlInput1" class="form-label">Lastname</label>
+            <input type="text" name='lastname' class="form-control" id="exampleFormControlInput1" placeholder="Lastname of admin">
+            @error('lastname')
+                            <small class='' style='color:red;'>{{$message}}</small>
+                        @enderror
+        </div>
 
-    <div class='mb-3'>   
-        <label for="exampleFormControlInput1" class="form-label">Email</label>
-        <input type="text" name='email' class="form-control" id="exampleFormControlInput1" placeholder="Email of admin">
-        @error('email')
-                        <small class='' style='color:red;'>{{$message}}</small>
-                    @enderror
-    </div>
+        <div class='mb-3'>   
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="text" name='email' class="form-control" id="exampleFormControlInput1" placeholder="Email of admin">
+            @error('email')
+                            <small class='' style='color:red;'>{{$message}}</small>
+                        @enderror
+        </div>
 
-    <div class='mb-3'>   
-        <label for="exampleFormControlInput1" class="form-label">Password</label>
-        <input type="password" name='password' class="form-control" id="exampleFormControlInput1" placeholder="Enter password">
-        @error('password')
-                        <small class='' style='color:red;'>{{$message}}</small>
-                    @enderror
-    </div>
+        <div class='mb-3'>   
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" name='password' class="form-control" id="exampleFormControlInput1" placeholder="Enter password">
+            @error('password')
+                            <small class='' style='color:red;'>{{$message}}</small>
+                        @enderror
+        </div>
 
-    <div class='mb-3'>   
-        <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-        <input type="password" name='password_confirmation' class="form-control" id="exampleFormControlInput1" placeholder="Confirm password">
-    </div>
+        <div class='mb-3'>   
+            <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+            <input type="password" name='password_confirmation' class="form-control" id="exampleFormControlInput1" placeholder="Confirm password">
+        </div>
 
-      <button type='submit' class='btn btn-danger' >Save Admin</button>
+        <button type='submit' class='btn btn-danger' >Save Admin</button>
     </form>
     </div>
 

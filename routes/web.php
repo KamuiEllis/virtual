@@ -35,6 +35,10 @@ Route::get('/addAdmin', function () {
     return view('addAdmin');
 });
 
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 
 
 Route::post('/register', [UserController::class, 'register']);
@@ -64,6 +68,8 @@ Route::post('/addAdmin', [UserController::class, 'addAdmin']);
 Route::get('/admins/{admin}', [UserController::class, 'getAdmin']);
 
 Route::put('/admins/{admin}', [UserController::class, 'editAdmin']);
+
+Route::put('/admins/profile/{admin}', [UserController::class, 'editProfile']);
 
 Route::delete('/admins/{admin}', [UserController::class, 'deleteAdmin']);
 

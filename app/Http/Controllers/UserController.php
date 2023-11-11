@@ -59,6 +59,23 @@ class UserController extends Controller
         return redirect('/addAdmin')->with('success', 'Admin has been created');
     }   
 
+    public function editProfile(User $admin,  Request $request) {
+        $inputs = $request->validate([
+            'firstname' => ['required'],
+            'lastname' => ['required'],
+            'email' => ['required', 'email'],
+            'password' => ['required', 'min:6', 'confirmed'],
+        ]);
+
+        $inputs['password'] = bcrypt($inputs['password']);
+
+        $admin->update($inputs);
+
+        auth()->login($admin);
+
+        return redirect('/profile')->with('success', 'Profile saved');
+    }   
+
 
     public function getAdmin(User $admin) {
         return view('singleAdmin', ['user'=> $admin]);
