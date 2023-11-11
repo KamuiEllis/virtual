@@ -21,7 +21,8 @@ class Product extends Model
         'images',
         'weight',
         'type',
-        'brand'
+        'brand',
+        'colors'
     ];
 
     public function toSearchableArray()

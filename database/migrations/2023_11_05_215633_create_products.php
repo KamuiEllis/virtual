@@ -23,6 +23,7 @@ return new class extends Migration
             $table->decimal('cost');
             $table->string('type');
             $table->string('brand');
+            $table->string('colors');
             $table->string('image')->nullable();
             $table->decimal('weight');
             $table->timestamps();

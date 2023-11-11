@@ -51,6 +51,14 @@
           <option value="service">Service</option>
       </select>
   </div>
+  <div class='mb-3'>   
+    <label for="exampleFormControlInput1" class="form-label">Available Colors <small>Separate colors using a comma</small> </label>
+
+    <input type="text" name='colors' value='{{$product->colors}}' class="form-control" id="exampleFormControlInput1" placeholder="Purple,Black">
+    @error('colors')
+                    <small class='' style='color:red;'>{{$message}}</small>
+                @enderror
+</div>
     <div class='mb-3'>   
         <label for="exampleFormControlInput1" class="form-label">Short Description</label>
         <input type="text" name='shortDescription' value='{{$product->shortDescription}}'  class="form-control" id="exampleFormControlInput1" placeholder="A short summary of the product">
