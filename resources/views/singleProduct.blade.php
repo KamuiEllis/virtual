@@ -36,6 +36,22 @@
                     @enderror
     </div>
     <div class='mb-3'>   
+      <label for="exampleFormControlInput1" class="form-label">Brand</label>
+      <input type="text" name='brand' value='{{$product->brand}}' class="form-control" id="exampleFormControlInput1" placeholder="Panasonic, Samsung, etc">
+      @error('brand')
+                      <small class='' style='color:red;'>{{$message}}</small>
+                  @enderror
+  </div>
+  <div class='mb-3'>
+      <label for="exampleFormControlInput1" class="form-label">Type: {{$product->type}}</label>
+      <select class="form-control" value='{{$product->type}}' name='type'>
+          <option selected>{{$product->type}}</option>
+          <option value="physical">Physical</option>
+          <option value="digital">Digital</option>
+          <option value="service">Service</option>
+      </select>
+  </div>
+    <div class='mb-3'>   
         <label for="exampleFormControlInput1" class="form-label">Short Description</label>
         <input type="text" name='shortDescription' value='{{$product->shortDescription}}'  class="form-control" id="exampleFormControlInput1" placeholder="A short summary of the product">
         @error('shortDescription')

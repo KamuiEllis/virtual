@@ -21,6 +21,8 @@ return new class extends Migration
             $table->longText('description');
             $table->integer('quantity');
             $table->decimal('cost');
+            $table->string('type');
+            $table->string('brand');
             $table->string('image')->nullable();
             $table->decimal('weight');
             $table->timestamps();

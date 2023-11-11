@@ -20,6 +20,8 @@ class Product extends Model
         'quantity',
         'images',
         'weight',
+        'type',
+        'brand'
     ];
 
     public function toSearchableArray()

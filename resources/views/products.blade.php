@@ -28,6 +28,7 @@
                 
                 <th scope="col">Sku</th>
                 <th scope="col">Name</th>
+                <th scope="col">Type</th>
                 <th scope="col">Quanity</th>
                 <th scope="col">Price</th>
                 <th scope="col">Weight</th>
@@ -39,6 +40,7 @@
                 <tr>
                   <td>{{$product->sku}}</td>
                   <td>{{$product->name}}</td>
+                  <td>{{$product->type}}</td>
                   <td>{{$product->quantity}}</td>
                   <td>$@php
                       echo addCommas($product->cost)
