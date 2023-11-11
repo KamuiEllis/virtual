@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -15,9 +17,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->middleware('check');
+Route::get('/', [Controller::class, 'dashboard'])->middleware('check');
 
 Route::get('/login', function () {
     return view('login');
@@ -27,11 +27,15 @@ Route::get('/register', function () {
     return view('register');
 });
 
-
-
 Route::get('/addProduct', function () {
     return view('addProduct');
 });
+
+Route::get('/addAdmin', function () {
+    return view('addAdmin');
+});
+
+
 
 Route::post('/register', [UserController::class, 'register']);
 
@@ -51,3 +55,22 @@ Route::put('/products/{product}', [ProductController::class, 'editProduct']);
 Route::delete('/products/{product}', [ProductController::class, 'deleteProduct']);
 
 Route::post('/products/search', [ProductController::class, 'search']);
+
+//User routes
+Route::get('/admins', [UserController::class, 'admins']);
+
+Route::post('/addAdmin', [UserController::class, 'addAdmin']);
+
+Route::get('/admins/{admin}', [UserController::class, 'getAdmin']);
+
+Route::put('/admins/{admin}', [UserController::class, 'editAdmin']);
+
+Route::delete('/admins/{admin}', [UserController::class, 'deleteAdmin']);
+
+Route::post('/admins/search', [UserController::class, 'search']);
+
+
+//Customer routes
+Route::get('/customers', [CustomerController::class, 'customers']);
+
+Route::post('/customers/search', [CustomerController::class, 'search']);

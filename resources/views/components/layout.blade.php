@@ -34,11 +34,11 @@
             <ul class="nav flex-column">
                 <li class="nav-item">
                     
-                    <a class="nav-link active link icons" href="#">
+                    <a class="nav-link active link icons" href="/">
                         <img src='{{ asset('/dashboard.png') }}' width='32'/>
                     </a>
 
-                    <a class="nav-link active link link-text" href="#">
+                    <a class="nav-link active link link-text" href="/">
                         Dashboard
                     </a>
                 </li>
@@ -51,7 +51,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active link icons" href="#">
+                    <a class="nav-link active link icons" href="/products">
                         <img src='{{ asset('/product.png') }}' width='32'/>
                     </a>
                     <a class="nav-link link link-text" href="/products">
@@ -59,19 +59,19 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active link icons" href="#">
+                    <a class="nav-link active link icons" href="/customers">
                         <img src='{{ asset('/customer.png') }}' width='32'/>
                     </a>
-                    <a class="nav-link link link-text" href="#">
+                    <a class="nav-link link link-text" href="/customers">
                         Customers
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active link icons" href="#">
+                    <a class="nav-link active link icons" href="/admins">
                         <img src='{{ asset('/support.png') }}' width='32'/>
                     </a>
-                    <a class="nav-link link link-text" href="#">
-                        Admins
+                    <a class="nav-link link link-text" href="/admins">
+                        Administrator
                     </a>
                 </li>
                 <li class="nav-item ">
@@ -79,7 +79,7 @@
                         <img src='{{ asset('/role.png') }}' width='32'/>
                     </a>
                     <a class="nav-link link link-text" href="#">
-                        Roles
+                        Delivery Zones
                     </a>
                 </li>
               

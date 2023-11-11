@@ -11,6 +11,11 @@
     font-size: 2em;
 }
 
+.block {
+
+    height:200px;
+}
+
 .sidebar {
     background-color: rgb(235, 119, 119);
     width:20%;
