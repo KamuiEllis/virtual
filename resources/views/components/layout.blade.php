@@ -46,10 +46,10 @@
 
         </form>
     </div>
-    <div class='row' style='height:100%;'>
-    <div class='sidebar col-3'>
+    <div class='row' style='height:100%; width:100%;'>
+    <div class='sidebar col-1'>
         <div class='name-container'>
-            <img src='{{ asset('/logo.png') }}' class='logo' style='margin-left:40px;'  width='200'/>
+            {{-- <img src='{{ asset('/logo.png') }}' class='logo' style='margin-left:40px;'  width='200'/> --}}
 
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -106,7 +106,7 @@
             </ul>
         </div>
     </div>
-    <div class='col-9'>
+    <div class='col-10'>
         {{$slot}}
     </div>
     </div>  

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\linechart;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -12,7 +13,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function dashboard (Request $request) {
-        return view('home');
+    public function dashboard (linechart $chart) {
+        return view('home', ['chart' => $chart->build()] );
     }
 }
