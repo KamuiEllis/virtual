@@ -2,7 +2,10 @@
                 
                 <div class="login-container">
                     <div>
-                        <h2 class="mb-5 heading">Login</h2>
+                        <div style='width:100%; text-align:center;'>
+                        <img src='{{ asset('/logo.png') }}' class='logo' width='200'/>
+                    </div>
+                        <h2 class="mb-5 heading" style='color:rgb(21, 43, 99)'>Login</h2>
                     </div>
                     <div>
                         

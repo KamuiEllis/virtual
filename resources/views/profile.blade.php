@@ -2,13 +2,14 @@
     <div class='p-4'>
         <p class='lead' style='font-size:25px;'>Profile</p>
         <hr/>
-        <small class='mb-5'>Edit your profile information.</small>
 
         @if (session('success'))
         <div class='alert alert-success mt-5' role='alert'>
             {{ session('success') }}
         </div>
         @endif
+        <div class='tablets'>
+            <small class='mb-5'>Edit your profile information.</small>
 
         <form action='/admins/profile/{{auth()->user()->id}}' method="POST" class="mb-3 mt-3" enctype="multipart/form-data">
             @method('PUT')
@@ -52,5 +53,6 @@
     
             <button type='submit' class='btn btn-danger'>Save</button>
         </form>
+        </div>
     </div>
 </x-layout>

@@ -27,7 +27,7 @@
         <form action='/logout' method='POST'>
             @csrf
             <div class="dropdown">
-                <button class="btn btn-danger dropdown-toggle m-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn  dropdown-toggle m-1" style='background-color:rgb(21, 43, 99); color:white;'  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Options
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

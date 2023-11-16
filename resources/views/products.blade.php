@@ -1,6 +1,6 @@
 <x-layout>
     @include('util')
-    <div class='p-4'>
+    <div class='p-4 '>
         <p class='lead' style='font-size:25px;'>Products</p>
         <hr/>
         @if (session('success'))
@@ -8,16 +8,19 @@
             {{ session('success') }}
         </div>
         @endif
+        <div  class='tablets'> 
+
+       
         <div class='row'>
             
             <form method='POST' action='/products/search' class='col-lg-9'>
                 @csrf
                 <input type='text' placeholder='Search' class='fields' name='text' value='' />
-                <button type='submit' class='btn btn-danger mb-lg-1 mt-lg-0 mt-sm-2' >Search</button>
+                <button type='submit' style='background-color:rgb(21, 43, 99); color:white;' class='btn mb-lg-1 mt-lg-0 mt-sm-2' >Search</button>
             </form>
 
             <div class='col-lg-3'>
-                <a href='/addProduct'><button type='submit' class='btn btn-danger add-button'>Add Product</button></a>
+                <a href='/addProduct'><button type='submit' style='background-color:rgb(21, 43, 99); color:white;' class='btn add-button'>Add Product</button></a>
             </div>
         </div>
        
@@ -53,5 +56,6 @@
             </tbody>
           </table>
         </div>
+      </div>
     </div>
 </x-layout>

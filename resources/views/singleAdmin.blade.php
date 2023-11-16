@@ -3,13 +3,16 @@
     <p class='lead' style='font-size:25px;'>Edit User</p>
     <hr/>
     
-    <small class='mb-5'>Enter information about admin.</small>
+    
     @if (session('success'))
     <div class='alert alert-success mt-5' role='alert'>
         {{ session('success') }}
     </div>
     @endif
     <br/>
+    
+    <div class='tablets'>
+    <small class='mb-5'>Enter information about admin.</small>
     <form action='/admins/{{$user->id}}' method="POST" class="mb-3 mt-3" enctype="multipart/form-data">
         @method('PUT')
         @csrf
@@ -37,8 +40,8 @@
                     @enderror
     </div>
 
-      <button type='submit' class='btn btn-danger'>Save Admin</button>
-      <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type='submit' class='btn' style='background-color:rgb(21, 43, 99); color:white;'>Save Admin</button>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Delete
       </button>
     </form>
@@ -58,8 +61,9 @@
                 @csrf
                 @method('DELETE')
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">DELETE</button>
+              <button type="submit" class="btn btn-danger">DELETE</button>
             </form>
+            </div>
           </div>
         </div>
       </div>

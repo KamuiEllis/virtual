@@ -3,12 +3,13 @@
     <p class='lead' style='font-size:25px;'>Add Product</p>
     <hr/>
     
-    <small class='mb-5'>Enter information about a product you want to add to your inventory.</small>
     @if (session('success'))
     <div class='alert alert-success mt-5' role='alert'>
         {{ session('success') }}
     </div>
     @endif
+    <div class='tablets'>
+        <small class='mb-5'>Enter information about a product you want to add to your inventory.</small>
 
     <img id="previewImage" src="#" alt="Image Preview"  style="display: none; max-width: 100%; width:200px; margin-top:10px;"/>
     <form action='/addProduct' method="POST" class="mb-3 mt-3" enctype="multipart/form-data">
@@ -95,8 +96,9 @@
                     @enderror
     </div>
 
-      <button type='submit' class='btn btn-danger' >Save Product</button>
+      <button type='submit' class='btn' style='background-color:rgb(21, 43, 99); color:white;' >Save Product</button>
     </form>
+    </div>
     </div>
 
     <script>

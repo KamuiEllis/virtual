@@ -8,12 +8,14 @@
             {{ session('success') }}
         </div>
         @endif
+
+        <div class='tablets'>
         <div class='row'>
             
             <form method='POST' action='/customers/search' class='col-lg-9'>
                 @csrf
                 <input type='text' placeholder='Search' class='fields' name='text' value='' />
-                <button type='submit' class='btn btn-danger mb-lg-1 mt-lg-0 mt-sm-2' >Search</button>
+                <button type='submit' class='btn  mb-lg-1 mt-lg-0 mt-sm-2' style='background-color:rgb(21, 43, 99); color:white;' >Search</button>
             </form>
 
             {{-- <div class='col-lg-3'>
@@ -47,5 +49,6 @@
             </tbody>
           </table>
         </div>
+      </div>
     </div>
 </x-layout>

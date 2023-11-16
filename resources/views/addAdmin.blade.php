@@ -3,12 +3,14 @@
     <p class='lead' style='font-size:25px;'>Add Administrator</p>
     <hr/>
     
-    <small class='mb-5'>Enter information about new admin.</small>
     @if (session('success'))
     <div class='alert alert-success mt-5' role='alert'>
         {{ session('success') }}
     </div>
     @endif
+
+    <div class='tablets'>
+    <small class='mb-5'>Enter information about new admin.</small>
 
     <img id="previewImage" src="#" alt="Image Preview"  style="display: none; max-width: 100%; width:200px; margin-top:10px;"/>
     <form action='/addAdmin' method="POST" class="mb-3 mt-3">
@@ -49,8 +51,8 @@
             <input type="password" name='password_confirmation' class="form-control" id="exampleFormControlInput1" placeholder="Confirm password">
         </div>
 
-        <button type='submit' class='btn btn-danger' >Save Admin</button>
-    </form>
+        <button type='submit' class='btn' style='background-color:rgb(21, 43, 99); color:white;' >Save Admin</button>
+    </form></div>
     </div>
 
 
