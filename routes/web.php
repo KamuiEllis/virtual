@@ -92,3 +92,8 @@ Route::get('/zones', [ZoneController::class, 'zones']);
 
 Route::post('/addZone', [ZoneController::class, 'addZone']);
 
+Route::get('/zones/{zone}', [ZoneController::class, 'getZone']);
+
+Route::put('/zones/{zone}', [ZoneController::class, 'editZone']);
+
+Route::delete('/zones/{zone}', [ZoneController::class, 'deleteZone']);
