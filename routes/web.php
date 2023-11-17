@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ZoneController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,10 @@ Route::get('/addAdmin', function () {
 
 Route::get('/profile', function () {
     return view('profile');
+});
+
+Route::get('/addZone', function () {
+    return view('addZone');
 });
 
 
@@ -80,3 +85,10 @@ Route::post('/admins/search', [UserController::class, 'search']);
 Route::get('/customers', [CustomerController::class, 'customers']);
 
 Route::post('/customers/search', [CustomerController::class, 'search']);
+
+
+//Zone routes
+Route::get('/zones', [ZoneController::class, 'zones']);
+
+Route::post('/addZone', [ZoneController::class, 'addZone']);
+

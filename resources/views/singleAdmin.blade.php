@@ -64,7 +64,6 @@
               <button type="submit" class="btn btn-danger">DELETE</button>
             </form>
             </div>
-          </div>
         </div>
       </div>
 

@@ -95,10 +95,10 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active link icons" href="#">
+                    <a class="nav-link active link icons" href="/zones">
                         <img src='{{ asset('/role.png') }}' width='32'/>
                     </a>
-                    <a class="nav-link link link-text" href="#">
+                    <a class="nav-link link link-text" href="/zones">
                         Delivery Zones
                     </a>
                 </li>
