@@ -48,8 +48,9 @@
     <div class='sidebar'>
         <div class='name-container'>
             <img src='{{ asset('/logo.png') }}' class='logo' style='margin-left:40px;'  width='200'/>
-
+            
             <ul class="nav flex-column">
+             
                 <li class="nav-item">
                     
                     <a class="nav-link active link icons" href="#">

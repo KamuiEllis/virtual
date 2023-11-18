@@ -49,11 +49,11 @@
     <div class='row' style='height:100%; width:100%;'>
     <div class='sidebar col-1'>
         <div class='name-container'>
-            {{-- <img src='{{ asset('/logo.png') }}' class='logo' style='margin-left:40px;'  width='200'/> --}}
+            <img src='{{ asset('/logo.png') }}' class='logo'   width='200'/>
 
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    
+
                     <a class="nav-link active link icons" href="/">
                         <img src='{{ asset('/dashboard.png') }}' width='32'/>
                     </a>
@@ -76,6 +76,22 @@
                     </a>
                     <a class="nav-link link link-text" href="/products">
                         Products
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active link icons" href="/products">
+                        <img src='{{ asset('/product.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="/sales">
+                        Sales
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link active link icons" href="/products">
+                        <img src='{{ asset('/product.png') }}' width='32'/>
+                    </a>
+                    <a class="nav-link link link-text" href="/statistics">
+                        Statistics
                     </a>
                 </li>
                 <li class="nav-item ">
