@@ -20,6 +20,8 @@ class Product extends Model
         'quantity',
         'images',
         'weight',
+        'cart',
+        'productType',
         'type',
         'brand',
         'colors'
@@ -29,4 +31,6 @@ class Product extends Model
     {
         return ['name' => $this->name, 'sku' => $this->sku];
     }
+
+
 }

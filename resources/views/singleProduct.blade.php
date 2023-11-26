@@ -53,6 +53,24 @@
           <option value="service">Service</option>
       </select>
   </div>
+  <div class='mb-3'>
+    <label for="exampleFormControlInput1" class="form-label">Type of product</label>
+    <select required class="form-control" name='productType'>
+        <option selected>Select Type</option>
+        <option value="computer">Computer</option>
+        <option value="tablets">Tablets</option>
+        <option value="accessories">Accessories</option>
+        <option value="adapters">Adapters</option>
+        <option value="tablets">Tablets</option>
+        <option value="furniture">Furniture</option>
+        <option value="moniters">Moniters</option>
+        <option value="phones">Phones</option>
+        <option value="speakers">Speakers</option>
+    </select>
+    @error('productType')
+                    <small class='' style='color:red;'>{{$message}}</small>
+                @enderror
+</div>
   <div class='mb-3'>   
     <label for="exampleFormControlInput1" class="form-label">Available Colors <small>Separate colors using a comma</small> </label>
 

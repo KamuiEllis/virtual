@@ -40,6 +40,7 @@ class ProductController extends Controller
             'shortDescription' => ['required'],
             'brand' => ['required'],
             'type' => ['required'],
+            'productType' => ['required'],
             'description' => ['required'],
             'colors' => ['required'],
             'cost' => ['required'],
@@ -47,7 +48,7 @@ class ProductController extends Controller
             'weight' => ['required'],
         ]);
 
-        $resizedImage = Image::make($request->file('image'))->fit(200)->encode('jpeg');
+        $resizedImage = Image::make($request->file('image'))->fit(300)->encode('jpeg');
         $isd = uniqid() . '.jpeg';
 
         Storage::put("public/products/$isd", $resizedImage);
@@ -75,6 +76,7 @@ class ProductController extends Controller
             'shortDescription' => ['required',],
             'description' => ['required'],
             'type' => ['required'],
+            'productType' => ['required'],
             'brand' => ['required'],
             'colors' => ['required'],
             'cost' => ['required'],
@@ -86,7 +88,7 @@ class ProductController extends Controller
         $product->update($inputs);
 
         if($request->file('image')) {
-            $resizedImage = Image::make($request->file('image'))->fit(200)->encode('jpeg');
+            $resizedImage = Image::make($request->file('image'))->fit(300)->encode('jpeg');
             $isd = uniqid() . '.jpeg';
     
             Storage::put("public/products/$isd", $resizedImage);
