@@ -23,7 +23,7 @@ return new class extends Migration
             $table->decimal('cost');
             $table->string('type');
             $table->string('productType');
-            $table->string('cart')->nullable();
+            $table->json('cart')->nullable();
             $table->string('brand');
             $table->string('colors');
             $table->string('image')->nullable();
