@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('quantity');
+            $table->boolean('enabled')->default(true);
             $table->unsignedBigInteger('product');
             $table->unsignedBigInteger('customer');
             $table->foreign('product')->references('id')->on('products')->onDelete('cascade');;
