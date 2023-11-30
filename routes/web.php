@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ZoneController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 
@@ -97,3 +98,6 @@ Route::get('/zones/{zone}', [ZoneController::class, 'getZone']);
 Route::put('/zones/{zone}', [ZoneController::class, 'editZone']);
 
 Route::delete('/zones/{zone}', [ZoneController::class, 'deleteZone']);
+
+//orders
+Route::get('/orders', [OrderController::class, 'orders']);

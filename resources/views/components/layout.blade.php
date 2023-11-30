@@ -63,10 +63,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active link icons" href="#">
+                    <a class="nav-link active link icons" href="/orders">
                         <img src='{{ asset('/order.png') }}' width='32'/>
                     </a>
-                    <a class="nav-link link link-text" href="#">
+                    <a class="nav-link link link-text" href="/orders">
                         Orders
                     </a>
                 </li>

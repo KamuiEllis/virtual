@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card block p-2">
-                        0
+                        10
                         <p class='block-title'>Pending Orders</p>
                         <hr style='margin-top: 5px;'/>
                        
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card block p-2">
-                        0
+                        200
                         <p class='block-title'>Products</p>
                         <hr style='margin-top: 5px;'/>
                      
@@ -23,7 +23,7 @@
                 <div class="col-md-4">
                     <div class="card block p-2">
                         <div>
-                            0
+                            5
                         <p class='block-title'>Today's Visitors</p>
                         <hr style='margin-top: 5px;'/>
                        

@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('parish');
             $table->string('delivery_type');
             $table->string('area');
+            $table->integer('zone_per_pound');
+            $table->integer('zone_cost');
+            $table->string('order_sku');
             $table->foreignId('cart_id');
             $table->decimal('total_payment');
             $table->string('status')->default('pending');
