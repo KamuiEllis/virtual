@@ -22,6 +22,9 @@ class Product extends Model
         'weight',
         'cart',
         'productType',
+        'subcategory',
+        'unboxing',
+        'partNumber',
         'type',
         'brand',
         'colors'
@@ -29,7 +32,7 @@ class Product extends Model
 
     public function toSearchableArray()
     {
-        return ['name' => $this->name, 'sku' => $this->sku];
+        return ['name' => $this->name, 'sku' => $this->sku, 'shortDescription' => $this->shortDescription, 'subcategory' => $this->subcategory, 'partNumber' => $this->partNumber];
     }
 
 

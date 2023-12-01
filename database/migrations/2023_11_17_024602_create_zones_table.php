@@ -18,7 +18,6 @@ return new class extends Migration
             $table->timestamps();
             $table->string('address');
             $table->string('courier');
-            $table->integer('price');
             $table->string('type');
             $table->string('parish');
             $table->string('services');

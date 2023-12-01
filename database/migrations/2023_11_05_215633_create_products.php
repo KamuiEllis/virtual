@@ -22,6 +22,9 @@ return new class extends Migration
             $table->integer('quantity');
             $table->decimal('cost');
             $table->string('type');
+            $table->string('subcategory');
+            $table->string('unboxing');
+            $table->string('partNumber')->nullable();
             $table->string('productType');
             $table->json('cart')->nullable();
             $table->string('brand');

@@ -18,7 +18,6 @@ class ZoneController extends Controller
         $inputs = $request->validate([
             'address' => ['required'],
             'courier' => ['required'],
-            'price' => ['required'],
             'type' => ['required'],
             'parish' => ['required'],
             'services' => ['required'],
@@ -40,7 +39,6 @@ class ZoneController extends Controller
         $inputs = $request->validate([
             'address' => ['required'],
             'courier' => ['required'],
-            'price' => ['required'],
             'type' => ['required'],
             'parish' => ['required'],
             'services' => ['required'],

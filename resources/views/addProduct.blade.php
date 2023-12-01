@@ -42,6 +42,22 @@
                         <small class='' style='color:red;'>{{$message}}</small>
                     @enderror
     </div>
+
+    <div class='mb-3'>   
+        <label for="exampleFormControlInput1" class="form-label">Unboxing Link</label>
+        <input type="text" name='unboxing'  class="form-control" id="exampleFormControlInput1" placeholder="Panasonic, Samsung, etc">
+        @error('unboxing')
+                        <small class='' style='color:red;'>{{$message}}</small>
+                    @enderror
+      </div>
+
+    <div class='mb-3'>   
+        <label for="exampleFormControlInput1" class="form-label">Part #</label>
+        <input type="text" name='partNumber' class="form-control" id="exampleFormControlInput1" placeholder="Panasonic, Samsung, etc">
+        @error('partNumber')
+                        <small class='' style='color:red;'>{{$message}}</small>
+                    @enderror
+    </div>
     <div class='mb-3'>
         <label for="exampleFormControlInput1" class="form-label">Nature of product</label>
         <select class="form-control" name='type'>
@@ -52,23 +68,69 @@
         </select>
     </div>
     <div class='mb-3'>
-        <label for="exampleFormControlInput1" class="form-label">Type of product</label>
+        <label for="exampleFormControlInput1" class="form-label">Category</label>
         <select required class="form-control" name='productType'>
             <option selected>Select Type</option>
-            <option value="computer">Computer</option>
-            <option value="tablets">Tablets</option>
-            <option value="accessories">Accessories</option>
-            <option value="adapters">Adapters</option>
-            <option value="tablets">Tablets</option>
-            <option value="furniture">Furniture</option>
-            <option value="moniters">Moniters</option>
-            <option value="phones">Phones</option>
-            <option value="speakers">Speakers</option>
+            <option value="APPLE ELECTRONICS">APPLE ELECTRONICS</option>
+            <option value="Consumer & Enterprise">Consumer & Enterprise</option>
+            <option value="Audio & Video">Audio & Video</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Computer Accessories">Computer Accessories</option>
+            <option value="Computer Peripherals">Computer Peripherals</option>
+            <option value="Carrying Cases">Carrying Cases</option>
+            <option value="Cell Phones">Cell Phones</option>
+            <option value="Carrying Cases">Carrying Cases</option>
+            <option value="Enterprise Hardware">Enterprise Hardware</option>
+            <option value="Computer Parts">Computer Parts</option>
+            <option value="Network Cabling Solutions">Network Cabling Solutions</option>
+            <option value="UPS">UPS</option>
+            <option value="CCTV & Access Control Systems">CCTV & Access Control Systems</option>
+            <option value="Cash Registers & Point of Sale Solutions">Cash Registers & Point of Sale Solutions</option>
+            <option value="Drones">Drones</option>
+            <option value="Network Services">Network Services</option>
+            <option value="Software">Software</option>
+            <option value="Wifi Rentals">Wifi Rentals</option>
         </select>
         @error('productType')
                         <small class='' style='color:red;'>{{$message}}</small>
                     @enderror
     </div>
+
+    <div class='mb-3'>
+        <label for="exampleFormControlInput1" class="form-label">Sub Category</label>
+        <select required class="form-control" name='subcategory'>
+            <option selected>Select Type</option>
+            <option value="Computer">Computer</option>
+            <option value="Tablets">Tablets</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Adapters">Adapters</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Moniters">Moniters</option>
+            <option value="Phones">Phones</option>
+            <option value="Speakers">Speakers</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Desktops">Desktops</option>
+            <option value="Access Points">Access Points</option>
+            <option value="Routers">Routers</option>
+            <option value="Network Switches">Network Switches</option>
+            <option value="Printers">Printers</option>
+            <option value="Ink">Ink</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Head Phones">Head Phones</option>
+            <option value="Batteries and Chargers">Batteries and Chargers</option>
+            <option value="Tablet Accessories">Tablet Accessories</option>
+            <option value="Misc">Misc</option>
+            <option value="Activity Trackers">Activity Trackers</option>
+            <option value="Mouse">Mouse</option>
+            <option value="Note Books">Note Books</option>
+            <option value="All in One">All in One</option>
+            <option value="Phone">Phone</option>
+        </select>
+        @error('subcategory')
+                        <small class='' style='color:red;'>{{$message}}</small>
+                    @enderror
+    </div>
+
     <div class='mb-3'>   
         <label for="exampleFormControlInput1" class="form-label">Available Colors <small>Separate colors using a comma</small> </label>
  

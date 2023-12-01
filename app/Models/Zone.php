@@ -14,7 +14,6 @@ class Zone extends Model
     protected $fillable = [
         'address',
         'courier',
-        'price',
         'type',
         'parish',
         'services',

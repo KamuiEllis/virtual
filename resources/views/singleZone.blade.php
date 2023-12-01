@@ -93,14 +93,6 @@
         </div>
 
         <div class='mb-3'>   
-            <label for="exampleFormControlInput1"  class="form-label">Price</label>
-            <input required type="number" name='price'  value={{$zone->price}} class="form-control" id="exampleFormControlInput1" placeholder="Cost of delivering to that area">
-            @error('price')
-                            <small class='' style='color:red;'>{{$message}}</small>
-                        @enderror
-        </div>
-
-        <div class='mb-3'>   
             <label for="exampleFormControlInput1" class="form-label">Cost Per Pound</label>
             <input required type="number" name='perPound'  value={{$zone->perPound}} class="form-control" id="exampleFormControlInput1" placeholder="Cost of delivering to that area">
             @error('perPound')
