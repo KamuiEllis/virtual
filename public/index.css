@@ -15,6 +15,10 @@
     padding: 0 2%;
 }
 
+nav {
+    float:right;
+}
+
 body {
     font-family: 'Oswald', sans-serif;
     background-color: rgb(240, 240, 240);

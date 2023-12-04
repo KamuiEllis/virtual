@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -21,12 +22,14 @@ return new class extends Migration
             $table->longText('description');
             $table->integer('quantity');
             $table->decimal('cost');
+            $table->string('deal')->default('');
+            $table->decimal('discountCost')->default(0);
             $table->string('type');
+            $table->decimal('timesBought')->default(0);
             $table->string('subcategory');
             $table->string('unboxing');
             $table->string('partNumber')->nullable();
             $table->string('productType');
-            $table->json('cart')->nullable();
             $table->string('brand');
             $table->string('colors');
             $table->string('image')->nullable();

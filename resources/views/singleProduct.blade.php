@@ -60,6 +60,8 @@
                     <small class='' style='color:red;'>{{$message}}</small>
                 @enderror
   </div>
+
+  
   <div class='mb-3'>
       <label for="exampleFormControlInput1" class="form-label">Type: {{$product->type}}</label>
       <select class="form-control" value='{{$product->type}}' name='type'>
@@ -178,12 +180,34 @@
                     @enderror
     </div>
 
+    <div class="form-check my-3 px-0">
+      <label for="exampleFormControlInput1" class="form-label">Deal</label>
+    <select required class="form-control" name='deal'>
+        <option selected>{{$product->deal}}</option>
+        <option value="regular">Regular</option>
+        <option value="sale">On Sale</option>
+    </select>
+    @error('deal')
+          <small class='' style='color:red;'>{{$message}}</small>
+    @enderror
+    </div>
+
+    <div class='mb-3'>   
+      <label for="exampleFormControlInput1" class="form-label">Discount Percentage</label>
+      <input type="number" name='discountCost' value="{{$product->discountCost}}" class="form-control" id="exampleFormControlInput1" placeholder="Price of item">
+      @error('discountCost')
+                      <small class='' style='color:red;'>{{$message}}</small>
+                  @enderror
+  </div>
+
       <button type='submit' class='btn ' style='background-color:rgb(21, 43, 99); color:white;'>Save Product</button>
       <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Delete
       </button>
     </form>
     </div>
+
+   
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

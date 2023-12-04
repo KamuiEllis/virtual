@@ -66,6 +66,8 @@ Route::delete('/products/{product}', [ProductController::class, 'deleteProduct']
 
 Route::post('/products/search', [ProductController::class, 'search']);
 
+Route::post('/products/import', [ProductController::class, 'import']);
+
 //User routes
 Route::get('/admins', [UserController::class, 'admins']);
 

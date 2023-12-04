@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports;
+use App\helpers\Util;
 use App\Models\Product;
+use App\Imports\ExcelImport;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    //
 
     public function search(Request $request) {
         $inputs = $request->validate([
@@ -21,8 +24,9 @@ class ProductController extends Controller
     }
 
     public function products(Request $request) {
-        $products = Product::orderBy("id","desc")->get();
-        return view("products", ['products' => $products]);
+        $products = Product::orderBy("id","desc")->paginate(10);
+        $count = Product::orderBy("id","desc")->get();
+        return view("products", ['products' => $products, 'count' => count($count)]);
     }
 
     public function getProduct(Product $product) {
@@ -30,6 +34,8 @@ class ProductController extends Controller
     }
 
     public function addProduct(Request $request) {
+
+ 
        
         $request->validate([
             'image' => 'required|image|max:20000'
@@ -51,6 +57,10 @@ class ProductController extends Controller
             'weight' => ['required'],
         ]);
 
+        
+        $newUrl = Util::convertYoutubeUrlToEmbedUrl($inputs['unboxing']); 
+        $inputs['unboxing'] = $newUrl;
+
         $resizedImage = Image::make($request->file('image'))->fit(300)->encode('jpeg');
         $isd = uniqid() . '.jpeg';
 
@@ -69,9 +79,26 @@ class ProductController extends Controller
         return redirect('/addProduct')->with('success', 'Product has been added to inventory');
     }
 
-     
+
+    public function import(Request $request)
+    {
+        // Validate the uploaded file
+        $request->validate([
+            'file' => ['required'],
+        ]);
+ 
+        // Get the uploaded filez
+        $file = $request->file('file');
+ 
+        // Process the Excel file
+        Excel::import(new ExcelImport, $file);
+
+        return redirect()->back()->with('success', 'Excel file imported successfully!');
+    }
 
     public function editProduct(Product $product, Request $request) {
+
+
 
         $inputs = $request->validate([
             'sku' => ['required'],
@@ -79,15 +106,21 @@ class ProductController extends Controller
             'shortDescription' => ['required',],
             'description' => ['required'],
             'type' => ['required'],
+            'deal' => [],
+            'discountCost' => ['required'],
             'productType' => ['required'],
             'brand' => ['required'],
+            'unboxing' => ['required'],
+            'subcategory' => ['required'],
+            'partNumber' => ['required'],
             'colors' => ['required'],
             'cost' => ['required'],
             'quantity' => ['required'],
             'weight' => ['required'],
         ]);
 
-
+        $newUrl = Util::convertYoutubeUrlToEmbedUrl($inputs['unboxing']); 
+        $inputs['unboxing'] = $newUrl;
         $product->update($inputs);
 
         if($request->file('image')) {

@@ -13,17 +13,32 @@
        
         <div class='row'>
             
-            <form method='POST' action='/products/search' class='col-lg-9'>
+            <form method='POST' action='/products/search' class='col-lg-9' >
                 @csrf
                 <input type='text' placeholder='Search' class='fields' name='text' value='' />
                 <button type='submit' style='background-color:rgb(21, 43, 99); color:white;' class='btn mb-lg-1 mt-lg-0 mt-sm-2' >Search</button>
+            </form>
+
+            <form method='POST' action='/products/import' class='col-lg-9' enctype="multipart/form-data">
+              @csrf
+              <input type='file' placeholder='Upload File' class='fields' name='file'  />
+              <button type='submit' style='background-color:rgb(21, 43, 99); color:white;' class='btn mb-lg-1 mt-lg-0 mt-sm-2' >Upload</button>
+              @error('file')
+              <small class='' style='color:red;'>{{$message}}</small>
+          @enderror
             </form>
 
             <div class='col-lg-3'>
                 <a href='/addProduct'><button type='submit' style='background-color:rgb(21, 43, 99); color:white;' class='btn add-button'>Add Product</button></a>
             </div>
         </div>
-       
+        <div class='row'>
+          <p class='col-6 mb-0 mt-3'>{{$count}} Products in total</p>
+          <div class='col-6' >
+           
+                 <p style='float:right;'>{{$products->links('pagination::bootstrap-4')}}</p>
+              
+      </div>
         <div class='table-responsive'>
         <table class="table table-hover table-responsive" style='width:100%'>
             <thead>
